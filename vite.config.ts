@@ -12,6 +12,8 @@ export default defineConfig({
         v3_fetcherPersist: true,
         v3_relativeSplatPath: true,
         v3_throwAbortReason: true,
+        v3_singleFetch: true,
+        v3_lazyRouteDiscovery: true,
       },
     }),
     tsconfigPaths(),
@@ -19,8 +21,4 @@ export default defineConfig({
   build: {
     target: "ES2022",
   },
-  optimizeDeps: {
-    // https://github.com/kaiban-ai/KaibanJS/issues/81
-    exclude: ["@smithy/shared-ini-file-loader"]
-  }
 });

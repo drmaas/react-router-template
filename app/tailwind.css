@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 html,
 body {
@@ -11,9 +9,5 @@ body {
   }
 }
 
-/* swagger editor */
-.Pane2 {
-  overflow-y: scroll;
-}
 
 

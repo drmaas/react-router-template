@@ -1,4 +1,4 @@
-import { json, LoaderFunctionArgs, TypedResponse } from "@remix-run/node";
+import { data, LoaderFunctionArgs } from "@remix-run/node";
 
 export interface SampleLoaderResponse {
   message: string;
@@ -6,6 +6,6 @@ export interface SampleLoaderResponse {
 
 export const sampleLoader = async ({
   request,
-}: LoaderFunctionArgs): Promise<TypedResponse<SampleLoaderResponse>> => {
-  return json({ message: "sample loader response" }, { status: 200 });
+}: LoaderFunctionArgs) => {
+  return data({ message: `sample loader response: ${request.url}` }, { status: 200 });
 };

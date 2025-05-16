@@ -1,7 +1,6 @@
 import {
     ActionFunctionArgs,
-    json,
-    TypedResponse,
+    data,
 } from '@remix-run/node';
 
 export interface SampleActionResponse {
@@ -11,14 +10,14 @@ export interface SampleActionResponse {
 
 export const sampleAction = async ({
     request,
-}: ActionFunctionArgs): Promise<TypedResponse<SampleActionResponse>> => {
+}: ActionFunctionArgs) => {
     console.log('post url: ', request.url);
     try {
-        return json(
+        return data(
             { message: 'Sample action complete!' },
             { status: 201 }
         );
     } catch (error) {
-        return json({ error: (error as Error).message }, { status: 400 });
+        return data({ error: (error as Error).message }, { status: 400 });
     }
 }

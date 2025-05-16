@@ -32,7 +32,7 @@ export default function App() {
   return (
     <SampleContextProvider>
       <div className="flex h-screen">
-        <div className={`flex-1 flex flex-col bg-gray-100`}>
+        <div className={`flex-1 flex flex-col bg-gray-400`}>
           <main className="flex-1 p-6 mt-16">
             <Outlet />
           </main>
