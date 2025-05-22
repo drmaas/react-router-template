@@ -13,3 +13,6 @@ server/index.js
 
 # Testing
 coverage
+
+# react router
+.react-router/

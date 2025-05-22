@@ -12,15 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { data } from "react-router";
-import { Route } from "../routes/+types/_index";
-
-export interface SampleLoaderResponse {
-  message: string;
-}
-
-export const sampleLoader = async ({
-  request,
-}: Route.LoaderArgs) => {
-  return data({ message: `sample loader response: ${request.url}` }, { status: 200 });
-};
+import type { Config } from "@react-router/dev/config";
+export default {
+  ssr: true,
+} satisfies Config;
